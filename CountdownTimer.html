@@ -17,8 +17,8 @@
 <center><body>
     
  <div class="boxStyle">
- <h2>Countdown Timer</h2>
- <h2>Time Left - <span id="countdowntimer">20 </span></h2>
+ <h2 id= "cdt">Countdown Timer</h2>
+ <h2 id= "cdt2">Time Left - <span id="countdowntimer">20 </span></h2>
 </div>
     
     <script type="text/javascript">
@@ -28,7 +28,9 @@
     document.getElementById("countdowntimer").textContent = timeleft;
     if(timeleft <= 0)
         clearInterval(countdownTimer);
-        background: red;
+        document.getElementById("cdt").textContent= "Countdown Done!";
+        document.getElementById("cdt2").textContent="";
+        document.background = Red;
     },1000);
     </script>
 
