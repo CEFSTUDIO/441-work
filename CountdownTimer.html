@@ -18,11 +18,19 @@
     
  <div class="boxStyle">
  <h2>Countdown Timer</h2>
- <h2>Time Left - </h2>
+ <h2>Time Left - <span id="countdowntimer">20 </span></h2>
 </div>
     
-    <script>
-    
+    <script type="text/javascript">
+     var timeleft = 20;
+    var countdownTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(countdownTimer);
+        background: red;
+    },1000);
     </script>
-</body></center>
+
+    </body></center>
 </html>
