@@ -14,27 +14,24 @@
 </style>
 </head>
 
-<body>
+<center><body>
     <p id="timer"></p>
     <script>
-// Set the date we're counting down to
-var countDown = new Time("20").getTime();
+var timer = document.getElementById("countdown-holder")
+    , now = new Date()
+    , deadline = new Date(now.getFullYear, now.getMonth, now.getDate, now.getHours, now.getMinutes + 15);
+ 
+  timer.innerHTML = countdown(deadline).toString();
+  setInterval(function(){
+    timer.innerHTML = countdown(deadline ).toString();
+  }, 1000);
+    
+    </script>
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-   
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "Countdown Done!";
-        document.background = Red;
-    }
-}, 1000);
-</script>
-<div align= center, class="boxStyle">
+ <div class="boxStyle">
  <h2>Countdown Timer</h2>
- <h2>Time Left - </h2>
+ <h2>Time Left - </h2><h2 id="countdown-holder"></h2>
 </div>
 
-</body>
+</body></center>
 </html>
