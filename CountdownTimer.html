@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style id= "styleID">
+<style>
 .boxStyle {
     float: center;
     width: 443px;
@@ -17,7 +17,7 @@
 
 <center><body onload= "myChanger()">
     
- <div class="boxStyle">
+ <div id= "testing", class="boxStyle">
  <h2 id= "cdt">Countdown Timer</h2>
  <h2 id= "cdt2">Time Left - <span id="countdowntimer">20 </span></h2>
 </div>
@@ -37,7 +37,7 @@
     setTimeout(function(){ 
      document.getElementById("cdt").textContent= "Countdown Done!";
      document.getElementById("cdt2").textContent="";
-     document.getElementById("styleID").style.background = "red";
+     document.getElementById("testing").style.background = "red";
     }, 5000);
      }
 
