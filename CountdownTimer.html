@@ -19,6 +19,7 @@
  <div class="boxStyle">
  <h2 id= "cdt">Countdown Timer</h2>
  <h2 id= "cdt2">Time Left - <span id="countdowntimer">20 </span></h2>
+   <button onclick="setTimeout(myChanger, 5000);">Try it</button>
 </div>
     
     <script type="text/javascript">
@@ -29,18 +30,13 @@
     if(timeleft >= 0)
         clearInterval(countdownTimer);
     },1000);
-    </script>
-    
-    setTimeout(myChanger, 5000);
-    
-    <script>
-function myChanger() {
+       
+        function myChanger() {
      document.getElementById("cdt").textContent= "Countdown Done!";
      document.getElementById("cdt2").textContent="";
      document.body.style.background = "red";
-}
-</script>
-
+      }
+    </script>
 
     </body></center>
 </html>
