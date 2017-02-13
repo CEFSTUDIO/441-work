@@ -26,10 +26,9 @@
     var countdownTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft < 0)
+    if(timeleft <= 0)
         clearInterval(countdownTimer);
-    if(timeleft == 0)
-        clearInterval(countdownTimer);
+    else(timeleft == 0)
         document.getElementById("cdt").textContent= "Countdown Done!";
         document.getElementById("cdt2").textContent="";
         document.body.style.background = "red";
