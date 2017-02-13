@@ -5,9 +5,9 @@
 <style>
 .boxStyle {
     float: center;
-    max-width: 443px;
+    width: 443px;
     background: LawnGreen;
-    font-family: "Courier New";
+    font-family: "Times New Roman";
     height: 259px;
     display: inline-block;
 } 
@@ -15,7 +15,23 @@
 </head>
 
 <body>
-<div class="boxStyle">
+    <p id="timer"></p>
+    <script>
+// Set the date we're counting down to
+var countDown = new Time("20").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+   
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "Countdown Done!";
+        document.background = Red;
+    }
+}, 1000);
+</script>
+<div align= center, class="boxStyle">
  <h2>Countdown Timer</h2>
  <h2>Time Left - </h2>
 </div>
