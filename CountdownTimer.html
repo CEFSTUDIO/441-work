@@ -22,14 +22,25 @@
 </div>
     
     <script type="text/javascript">
-     var timeleft = 20;
+    var timeleft = 20;
     var countdownTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
     if(timeleft >= 0)
         clearInterval(countdownTimer);
-    },250);
+    },1000);
     </script>
+    
+    setTimeout(myChanger, 5000);
+    
+    <script>
+function myChanger() {
+     document.getElementById("cdt").textContent= "Countdown Done!";
+     document.getElementById("cdt2").textContent="";
+     document.body.style.background = "red";
+}
+</script>
+
 
     </body></center>
 </html>
