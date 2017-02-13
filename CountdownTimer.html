@@ -2,10 +2,11 @@
 <html lang="en-us">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<style id= "styleID">
 .boxStyle {
     float: center;
     width: 443px;
+    padding: 10px;
     background: LawnGreen;
     font-family: "Times New Roman";
     height: 259px;
@@ -36,7 +37,7 @@
     setTimeout(function(){ 
      document.getElementById("cdt").textContent= "Countdown Done!";
      document.getElementById("cdt2").textContent="";
-     document.body.boxStyle.background = "red";
+     document.getElementById("styleID").background = "red";
     }, 5000);
      }
 
