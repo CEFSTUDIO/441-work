@@ -5,6 +5,7 @@
 <style>
 .boxStyle {
     float: center;
+    padding: 50px 30px 50px 80px;
     width: 443px;
     background: LawnGreen;
     font-family: "Times New Roman";
@@ -15,7 +16,12 @@
 </head>
 
 <center><body>
-    <p id="timer"></p>
+    
+ <div class="boxStyle">
+ <h2>Countdown Timer</h2>
+ <h2>Time Left - </h2><h2 id="countdown-holder"></h2>
+</div>
+    
     <script>
 var timer = document.getElementById("countdown-holder")
     , now = new Date()
@@ -27,11 +33,5 @@ var timer = document.getElementById("countdown-holder")
   }, 1000);
     
     </script>
-
- <div class="boxStyle">
- <h2>Countdown Timer</h2>
- <h2>Time Left - </h2><h2 id="countdown-holder"></h2>
-</div>
-
 </body></center>
 </html>
