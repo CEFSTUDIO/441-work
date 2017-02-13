@@ -5,6 +5,8 @@
 <style>
 .boxStyle {
     float: center;
+    margin: 0px;
+    padding: 0px;
     width: 440px;
     background: LawnGreen;
     font-family: "Times New Roman";
@@ -18,7 +20,8 @@
 <center><body onload= "myChanger()">
     
  <div id= "divID", class="boxStyle">
-     <h1 id= "cdt">Countdown Timer<br>Time Left - <span id="countdowntimer">20 </span></h1>
+     <h1 id= "cdt">Countdown Timer</h1>
+     <h1 id="cdt2">Time Left - <span id="countdowntimer">20 </span></h1>
 </div>
     
     <script type="text/javascript">
@@ -35,6 +38,7 @@
         function myChanger() {
     setTimeout(function(){ 
      document.getElementById("cdt").textContent= "Countdown Done!";
+    document.getElementById("cdt2").textContent= "";
      document.getElementById("divID").style.background = "red";
     }, 5000);
      }
