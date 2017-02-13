@@ -18,8 +18,8 @@
 <center><body onload= "myChanger()">
     
  <div id= "divID", class="boxStyle">
- <h1 id= "cdt">Countdown Timer</h1>
- <h1 id= "cdt2">Time Left - <h1 id="countdowntimer">20 </h1></h1>
+ <h1 id= "cdt">Countdown Timer
+     Time Left - <span id="countdowntimer">20 </span></h1>
 </div>
     
     <script type="text/javascript">
@@ -36,7 +36,6 @@
         function myChanger() {
     setTimeout(function(){ 
      document.getElementById("cdt").textContent= "Countdown Done!";
-     document.getElementById("cdt2").textContent="";
      document.getElementById("divID").style.background = "red";
     }, 5000);
      }
