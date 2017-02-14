@@ -1,14 +1,3 @@
-<style>
-.boxStyle {
-    float: center;
-    width: 440px;
-    background: LawnGreen;
-    font-family: "Times New Roman";
-    height: 260px;
-    line-height: 80px;
-    display: inline-block;
-} 
-</style>
 <h2><u>Homework 2 Read Me Response</u></h2>
 <p>Surprisingly difficult. The worst trouble I had was learning all the neccessary JavaScript to do it. I spent a good amount of time
 looking over in class examples and outside resources in an effort to get it to work. I knew exactly how to do it in Java but doing it
@@ -26,10 +15,5 @@ complete the assignment. I spent 3 or 4 hours doing this. I didn't anticipate it
 CSS, and Java helped but I definitely need more time with JavaScript.</p>
 
 <p>The box itself was easy- it was mostly formatting. The code itself for the timer wasn't too difficult. I just didn't expect to struggle
-so much with centering two lines of text vertically in a box. If I take anything away from this assignment- I can at the very least do that.
-I can vertically center two lines of text in a box. Small victories.</p>
+so much with centering two lines of text vertically in a box. If I take anything away from this assignment- I can at the very least do that. I can vertically center two lines of text in a box. Small victories.</p>
 
- <div id= "divID", class="boxStyle">
-     <h1 id= "cdt">Countdown Timer</h1>
-     <h1 id="cdt2">Time Left - #</span></h1>
-</div>
