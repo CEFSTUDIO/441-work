@@ -131,10 +131,13 @@ function myChanger4() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
     //text box for name entry
-    var textBox = document.createElement("input")
+    var textBox = document.createElement("input");
     textBox.type = "text";
     document.getElementById("text").appendChild(textBox);
-    nameHere= textBox.value;
+    //submit button for name entry
+    var submitButton = document.createElement("input");
+    submitButton.type = "button";
+    document.getElementById("text").appendChild("input");
 }
 </script>
 
