@@ -65,7 +65,7 @@
 </div>
 
 <script>
-//changes text/img/quote when yes is pressed
+//changes text/img/quote when leftButton yes is pressed
 function myChanger() {
     document.getElementById("text").innerHTML = "So you wanna slay a dragon? Good! Now, where do dragons live? " +
         "Caves, usually- or perhaps the old abandoned castle? Before we figure out where to go- what is your name?";
@@ -75,10 +75,11 @@ function myChanger() {
     document.getElementById("leftButton").innerHTML="Enter Name?";
     document.getElementById("rightButton").innerHTML="Give Up!";
     //changes the function the buttons use
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "javascript: myChanger3();" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "javascript: myChanger3();" );
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "javascript: myChanger4();" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "javascript: gameOver();" );
 }
- //changes text/img/quote when no is pressed
+ //changes text/img/quote when rightButton no is pressed
+    //This function only is used when "no" is pressed at the beginning. Default Game-Over elsewhere.
  function myChanger2() {
     document.getElementById("text").innerHTML = "GAME OVER! " + "Didn't even want to try? Really? What kind of knight are you? Or- are "+
     "you even a knight at all? You must be real fun at parties! Really. Invitation is in the mail.";
@@ -91,15 +92,44 @@ function myChanger() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "javascript: myChanger3();" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "javascript: myChanger3();" );
 }
-//Changes the text/img when pressed-testing
+//Changes the text/img when rightButton/leftButton is pressed. [Right/left-Loser buttons]
+    //This function is a dead end- no further action unless page is reloaded- game over.
 function myChanger3() {
-    document.getElementById("text").innerHTML = "Testing";
+    document.getElementById("text").innerHTML = "You're still a loser. You didn't even try! Why did you click on the buttons? Only a loser " +
+    "would click on the buttons. They're pointless, really. You can't go back. You'll have to reload the page! Be brave! Give it a shot.";
+    document.getElementById("img").src = "https://68.media.tumblr.com/830c4a6f9ab43f1b3b808bfceeb02866/tumblr_nrwpmsBkdC1u4tvaao1_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Still a Loser";
+    document.getElementById("rightButton").innerHTML="Biggest Loser";
+ //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//This is the default gameover- occuring whenever a wrong choice is made. (Can be caused by either button press)
+    //This function is a dead end- no further action unless page is reloaded- game over.
+function gameOver() {
+ document.getElementById("text").innerHTML = "GAME OVER!  You lost! Not sure how but you lost. What kind of knight are you? A pathetic one. " +
+    " No going back- have to reload to try again. No check point system either. You're dead. Can't really stop being dead. So- better luck next time.";
     document.getElementById("img").src = "http://i.imgur.com/xZsABpV.gif";
     //changes text of buttons
-    document.getElementById("leftButton").innerHTML="Testing";
-    document.getElementById("rightButton").innerHTML="Testing";
-}
-    
+    document.getElementById("leftButton").innerHTML="GAME OVER";
+    document.getElementById("rightButton").innerHTML="GAME OVER";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+} 
+//Changes the text/img when leftButton is pressed. [Enter Name]
+function myChanger4() {
+    var nameHere = "Eggs Benedict";
+    document.getElementById("text").innerHTML = "According to my psychic powers your name is " + nameHere + ". What an interesting name. "+
+    "If I'm wrong- correct me below. Your name should change to the correct one!";
+    document.getElementById("img").src = "http://33.media.tumblr.com/d4e3375ce2733f80c0b38ea400280a11/tumblr_n9xpitdMKm1twaufoo4_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Move Onward";
+    document.getElementById("rightButton").innerHTML="Get Supplies First";
+    //changes the function the buttons use.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 </script>
 
 </body>
