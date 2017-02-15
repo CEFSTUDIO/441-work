@@ -122,7 +122,7 @@ function gameOver() {
 function myChanger4() {
     var nameHere = "Eggs Benedict";
     document.getElementById("text").innerHTML = "According to my psychic powers your name is " + nameHere + ". What an interesting name. "+
-    "If I'm wrong- correct me below. Your name should change to the correct one!" + input;
+    "If I'm wrong- correct me below. Your name should change to the correct one!" + textBox;
     document.getElementById("img").src = "http://33.media.tumblr.com/d4e3375ce2733f80c0b38ea400280a11/tumblr_n9xpitdMKm1twaufoo4_500.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="Move Onward";
@@ -131,10 +131,9 @@ function myChanger4() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
     //text box for name entry
-    var input = document.createElement("input"); 
-    input.type = "text";
-    nameHere.id= userInput;
-    document.getElementbyId("userInput").appendChild(input);
+    var textBox = document.createElement("input")
+    textBox.type = "text";
+    textBox.value= "Name Here!";
 }
 </script>
 
