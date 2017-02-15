@@ -109,7 +109,7 @@ function myChanger3() {
     //This function is a dead end- no further action unless page is reloaded- game over.
 function gameOver() {
  document.getElementById("text").innerHTML = "GAME OVER!  You lost! Not sure how but you lost. What kind of knight are you? A pathetic one. " +
-    " No going back- have to reload to try again. No check point system either. You're dead. Can't really stop being dead. So- better luck next time.";
+    " No going back- have to reload to try again. No check point system either. You're dead. [Somehow?] Can't really stop being dead. So- better luck next time.";
     document.getElementById("img").src = "http://i.imgur.com/xZsABpV.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="GAME OVER";
@@ -130,6 +130,12 @@ function myChanger4() {
     //changes the function the buttons use.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+    //text box for name entry
+    var input = document.createElement("input"); 
+    input.type = "text";
+    input.setAttribute.("id", "userInput");
+    nameHere = document.getElementById("userInput").value; 
+    container.appendChild(input); 
 }
 </script>
 
