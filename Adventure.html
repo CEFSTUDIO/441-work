@@ -50,8 +50,8 @@
     slaying a dragon. [Super original I know]- You only have your sword, a shield, a horse, some food, and one bottle of water. Use these things wisely! 
    By order of the King- will you slay the dragon brave knight?</p>
 
-<center><button style= "DarkSlateGrey;" id= leftButton onclick="myChanger()">Yes?</button>
-<button style= "DarkSlateGrey;" id= rightButton onclick="myChanger2()">No!</button></center>
+<center><button style= "color:DarkSlateGrey;" id= leftButton onclick="myChanger()">Yes?</button>
+<button style= "color:DarkSlateGrey;" id= rightButton onclick="myChanger2()">No!</button></center>
 </div>
     
 <div class="dungeonStyle">
@@ -66,11 +66,13 @@
 
 <script>
 function myChanger() {
-    document.getElementById("text").innerHTML = "1,2,3 Testing!";
+    document.getElementById("text").innerHTML = "So you wanna slay a dragon? Good! Now, where do dragons live? " +
+        "Caves, usually- or perhaps the old abandoned castle? Before we figure out where to go- what is your name?";
     document.getElementById("img").src = "https://media.giphy.com/media/KyaUq9qT3WGMU/giphy.gif";
 }
     function myChanger2() {
-    document.getElementById("text").innerHTML = "Sucks to suck";
+    document.getElementById("text").innerHTML = "GAME OVER- " + "Didn't even want to try? Really? What kind of knight are you? Or- are "+
+    "you even a knight at all?";
     document.getElementById("img").src = "https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif";
 }
 </script>
