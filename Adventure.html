@@ -132,13 +132,14 @@ function myChanger4() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger5()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger6()" );
     //text box for name entry
-    var textBox = document.createElement("input", "TBID");
+    var textBox = document.createElement("input");
     textBox.type = "text";
+    textBox.id= "TBID";
     var submitBox = document.createElement("input");
     textBox.type = "submit";
     document.getElementById("text").appendChild(textBox);
-     document.getElementById("text").appendChild(submitBox);
-    nameHere= document.getElementById("TBID").value;
+    document.getElementById("text").appendChild(submitBox);
+    document.getElementById("TBID").value= nameHere;
 }
 //Changes the text/img when leftButton is pressed. [Move Onward]
 function myChanger5() {
