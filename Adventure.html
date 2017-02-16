@@ -62,12 +62,15 @@
    
     <p style="color:DarkSlateGrey;">I hope you enjoyed the dungeon! It's not super long but it's at least sort of interesting? I recommend
     playing it different each time just to see what sorts of endings you can get! Be wild, be free! Adventure on! Also yes, I might be a
-    fan of How to Train your Dragon- sue me. [Please don't actually sue me?]</p> 
+    fan of How to Train your Dragon- sue me. [Please don't actually sue me?] There are 7 unique endings and a lot of ways to get Game Overs!</p> 
 </div>
 
 <script>
 //assigned here to be used by functions below.
 var nameHere = "Eggs Benedict";
+ 
+ //Changing Functions Below!
+    
 //changes text/img/quote when leftButton yes is pressed
 function myChanger() {
     document.getElementById("text").innerHTML = "So you wanna slay a dragon? Good! Now, where do dragons live? " +
@@ -105,19 +108,6 @@ function myChanger3() {
     document.getElementById("leftButton").innerHTML="Still a Loser";
     document.getElementById("rightButton").innerHTML="Biggest Loser";
  //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
-}
-//This is the default gameover- occuring whenever a wrong choice is made. (Can be caused by either button press)
-    //This function is a dead end- no further action unless page is reloaded- game over.
-function gameOver() {
- document.getElementById("text").innerHTML = "GAME OVER!  You lost! Not sure how but you lost. What kind of knight are you? A pathetic one. " +
-    " No going back- have to reload to try again. No check point system either. You're dead. [Somehow?] Can't really stop being dead. So- better luck next time.";
-    document.getElementById("img").src = "http://i.imgur.com/xZsABpV.gif";
-    //changes text of buttons
-    document.getElementById("leftButton").innerHTML="GAME OVER";
-    document.getElementById("rightButton").innerHTML="GAME OVER";
-    //changes the function the buttons use- no function now.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 } 
@@ -227,24 +217,9 @@ function myChanger10() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger14()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger13()" );
 }
-//Changes the text/img when rightButton is pressed. [Give Dragon Nip?]
-    //This function is a dead end- no further action unless page is reloaded- Game Won!
-function myEnding1() {
-    document.getElementById("text").innerHTML = "The dragon loves it! You're best buddies for life! " + nameHere +
-    ", you decided friendship was important! Why kill the dragon when you can be besties? You name the dragon Mr.Frisky and" + 
-    " live happily ever after. Seriously you own a dragon- you rule! King isn't too thrilled though with your new pet." +
-    " There go the new drapes. You won! The buttons won't do a thing now, winner you. Refresh to play again!";
-    document.getElementById("img").src = "https://media.tenor.co/images/b53ebe7c3433e0f97bfbdf0f372a0adc/raw";
-    //changes text of buttons
-    document.getElementById("leftButton").innerHTML="Winner!";
-    document.getElementById("rightButton").innerHTML="Power of Friendship!";
-    //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
-}
 //Changes the text/img when leftButton is pressed. [Further In?]- cave- no items
 function myChanger11() {
-    document.getElementById("text").innerHTML = "It's a dragon all right. It looks mad- probably should have mentioned your sword and shield," + 
+    document.getElementById("text").innerHTML = "It's a dragon all right. It looks mad- probably should have mentioned your sword and shield, " + 
     nameHere + ", are actually made of wood. It opens it's gaping maw- as if you could throw something in it before breathing fire." +
     " There goes your sword and shield. Your horse runs away as well, frightened. What a horse! What will you do?";
     document.getElementById("img").src = "https://s-media-cache-ak0.pinimg.com/originals/54/59/d7/5459d7f5570c02d75f70e370eae0b092.gif";
@@ -252,8 +227,8 @@ function myChanger11() {
     document.getElementById("leftButton").innerHTML="Throw Water bottle?";
     document.getElementById("rightButton").innerHTML="Throw Food?";
     //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "myEnding5()" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "myEnding6()" );
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myEnding4()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myEnding5()" );
 }
 //Changes the text/img when leftButton is pressed. [Further In?]- castle- no items
 function myChanger12() {
@@ -266,20 +241,6 @@ function myChanger12() {
     //changes the function the buttons use- no function now.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "myEnding2()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger7()" );
-}
-//Changes the text/img when leftButton is pressed. [Propose to Princess?]
-    //This function is a dead end- no further action unless page is reloaded- Game Won!
-function myEnding2() {
-    document.getElementById("text").innerHTML = "Nice wife, " + nameHere + "! She's really into to you! " +
-    "Of course she said yes- how could she resist the charms of " + nameHere + "King doesn't like his dead beat in-law though. " +
-    "He'd probably like a dragon slaying in-law instead, you know? You've won! [In a way?] Have to reload to try again!";
-    document.getElementById("img").src = "https://68.media.tumblr.com/31a185ac332fe1f6ce46348ae55a120e/tumblr_ocqixovPXE1vrr87eo1_500.gif";
-    //changes text of buttons
-    document.getElementById("leftButton").innerHTML="Holy";
-    document.getElementById("rightButton").innerHTML="Matrimony";
-    //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
 //Changes the text/img when rightButton is pressed. [Castle?]- with items
 function myChanger13() {
@@ -317,6 +278,51 @@ function myChanger15() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "myEnding3()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger14()" );
 }
+
+//Changes the text/img when leftButton is pressed. [Further In?]- castle- with items
+function myChanger16() {
+    document.getElementById("text").innerHTML = "It's a dragon all right. It looks mad- probably should have mentioned your sword and shield, " + 
+    nameHere + ", are actually made of wood. It opens it's gaping maw- as if you could throw something in it before breathing fire." +
+    " There goes your sword and shield. Your horse runs away as well, frightened. What a horse! What will you do?";
+    document.getElementById("img").src = "https://s-media-cache-ak0.pinimg.com/originals/54/59/d7/5459d7f5570c02d75f70e370eae0b092.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Throw Poison?";
+    document.getElementById("rightButton").innerHTML="Throw Food?";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myEnding6()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myEnding5()" );
+}
+
+//ENDINGS/GAMEOVERS BELOW
+//Changes the text/img when rightButton is pressed. [Give Dragon Nip?]
+    //This function is a dead end- no further action unless page is reloaded- Game Won!
+function myEnding1() {
+    document.getElementById("text").innerHTML = "The dragon loves it! You're best buddies for life! " + nameHere +
+    ", you decided friendship was important! Why kill the dragon when you can be besties? You name the dragon Mr.Frisky and" + 
+    " live happily ever after. Seriously you own a dragon- you rule! King isn't too thrilled though with your new pet." +
+    " There go the new drapes. You won! The buttons won't do a thing now, winner you. Refresh to play again!";
+    document.getElementById("img").src = "https://media.tenor.co/images/b53ebe7c3433e0f97bfbdf0f372a0adc/raw";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Winner!";
+    document.getElementById("rightButton").innerHTML="Power of Friendship!";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//Changes the text/img when leftButton is pressed. [Propose to Princess?]
+    //This function is a dead end- no further action unless page is reloaded- Game Won!
+function myEnding2() {
+    document.getElementById("text").innerHTML = "Nice wife, " + nameHere + "! She's really into to you! " +
+    "Of course she said yes- how could she resist the charms of " + nameHere + "King doesn't like his dead beat in-law though. " +
+    "He'd probably like a dragon slaying in-law instead, you know? You've won! [In a way?] Have to reload to try again!";
+    document.getElementById("img").src = "https://68.media.tumblr.com/31a185ac332fe1f6ce46348ae55a120e/tumblr_ocqixovPXE1vrr87eo1_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Holy";
+    document.getElementById("rightButton").innerHTML="Matrimony";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
 //Changes the text/img when leftButton is pressed. [Propose to Princess?]
     //This function is a dead end- no further action unless page is reloaded- Game Over!
 function myEnding3() {
@@ -332,18 +338,60 @@ function myEnding3() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
-//Changes the text/img when leftButton is pressed. [Further In?]- castle- with items
-function myChanger16() {
-    document.getElementById("text").innerHTML = "It's a dragon all right. It looks mad- probably should have mentioned your sword and shield," + 
-    nameHere + ", are actually made of wood. It opens it's gaping maw- as if you could throw something in it before breathing fire." +
-    " There goes your sword and shield. Your horse runs away as well, frightened. What a horse! What will you do?";
-    document.getElementById("img").src = "https://s-media-cache-ak0.pinimg.com/originals/54/59/d7/5459d7f5570c02d75f70e370eae0b092.gif";
+//Changes the text/img when leftButton is pressed. [Throw Water Bottle?]- no items
+    //This function is a dead end- no further action unless page is reloaded- Game Over!
+function myEnding4() {
+    document.getElementById("text").innerHTML = "You hurl a water bottle- hits it smack in the mouth. It gets angry." +
+    " Why did you think that was a good idea, " + nameHere + "? You've made it angry! It gobbles you up. Ouch.";
+    document.getElementById("img").src = "http://orig09.deviantart.net/3a1e/f/2013/005/4/1/toothless_eating_gif_by_xx_nightfurygirl_xx-d5qfaiz.gif";
     //changes text of buttons
-    document.getElementById("leftButton").innerHTML="Throw Poison?";
-    document.getElementById("rightButton").innerHTML="Throw Food?";
+    document.getElementById("leftButton").innerHTML="You";
+    document.getElementById("rightButton").innerHTML="Died";
     //changes the function the buttons use- no function now.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "myEnding6()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//Changes the text/img when rightButton is pressed. [Throw Food?]-Either Scenario
+    //This function is a dead end- no further action unless page is reloaded- Game Won!
+function myEnding5() {
+    document.getElementById("text").innerHTML = "Turns out the noise you heard before, " + nameHere + ", was a grumbly tummy!" +
+    " The dragon was just hungry! No wonder it was acting out. You're best friends for life now! Way to go! Reload to try to get" +
+    " other endings! Thanks for playing, " + nameHere;
+    document.getElementById("img").src = "https://s-media-cache-ak0.pinimg.com/originals/07/93/9b/07939bc0561a77db7040b209847a954f.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="New";
+    document.getElementById("rightButton").innerHTML="Friend!";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//Changes the text/img when rightButton is pressed. [Throw Poison?]-with items
+    //This function is a dead end- no further action unless page is reloaded- Game Won!
+function myEnding6() {
+    document.getElementById("text").innerHTML = "You slayed the dragon! It chokes on the poison as it goes to eat you." + 
+    " It promptly sneezes before dying due to the poison. You've won the game, the true ending. Way to go, " + 
+    nameHere + "! You've done it. That's it. Thanks for playing! There is a total of 7 unique endings- try and get them all!" +
+    " Reload the page to try again. Thanks for playing, " + nameHere + ". History will remember you.";
+    document.getElementById("img").src = "http://i.imgur.com/UvLtgRv.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Dragon";
+    document.getElementById("rightButton").innerHTML="Slayed!";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//This is the default gameover- occuring whenever a wrong choice is made. (Can be caused by either button press)
+    //This function is a dead end- no further action unless page is reloaded- game over.
+function gameOver() {
+ document.getElementById("text").innerHTML = "GAME OVER!  You lost! Not sure how but you lost. What kind of knight are you? A pathetic one. " +
+    " No going back- have to reload to try again. No check point system either. You're dead. [Somehow?] Can't really stop being dead. So- better luck next time.";
+    document.getElementById("img").src = "http://i.imgur.com/xZsABpV.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="GAME OVER";
+    document.getElementById("rightButton").innerHTML="GAME OVER";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
 </script>
 
