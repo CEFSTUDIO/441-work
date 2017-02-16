@@ -138,10 +138,10 @@ function myChanger4() {
     var submitBox = document.createElement("input");
     submitBox.type = "submit";
     submitBox.id= "SBID";
-    document.getElementById("SBID").setAttribute( "onClick", "myNameChanger()" );
     document.getElementById("text").appendChild(textBox);
     document.getElementById("text").appendChild(submitBox);
-}
+    document.getElementById("SBID").onclick = myNameChanger();
+} 
     //Changes the player name.
 function myNameChanger() {
     textBox.value= nameHere;
