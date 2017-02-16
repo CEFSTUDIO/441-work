@@ -302,7 +302,7 @@ function myChanger14() {
     document.getElementById("leftButton").innerHTML="Further In?";
     document.getElementById("rightButton").innerHTML="Retreat!";
     //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger16()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger2()" );
 }
 //Changes the text/img when leftButton is pressed. [Further In?]- castle- with items
@@ -333,6 +333,7 @@ function myEnding3() {
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
 //Changes the text/img when leftButton is pressed. [Further In?]- castle- with items
+function myChanger16() {
     document.getElementById("text").innerHTML = "It's a dragon all right. It looks mad- probably should have mentioned your sword and shield," + 
     nameHere + ", are actually made of wood. It opens it's gaping maw- as if you could throw something in it before breathing fire." +
     " There goes your sword and shield. Your horse runs away as well, frightened. What a horse! What will you do?";
