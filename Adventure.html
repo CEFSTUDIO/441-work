@@ -123,7 +123,8 @@ function gameOver() {
 //Changes the text/img when leftButton is pressed. [Enter Name]
 function myChanger4() {
     document.getElementById("text").innerHTML = "According to my psychic powers your name is " + nameHere + ". What an interesting name. "+
-    "If I'm wrong- correct me below. Your name should change to the correct one in the next panel. ";
+    "If I'm wrong- correct me below. Your name should change to the correct one in the next panel. If you do not provide one- it'll be "+
+     "The one I provided for you- meaning I was correct! Alternatively if you put nothing and hit submit- your name will be something...";
     document.getElementById("img").src = "http://33.media.tumblr.com/d4e3375ce2733f80c0b38ea400280a11/tumblr_n9xpitdMKm1twaufoo4_500.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="Move Onward";
@@ -142,6 +143,9 @@ function myChanger4() {
     document.getElementById("text").appendChild(submitBox);
     document.getElementById("SBID").onclick = function myNameChanger() {
     nameHere= textBox.value;
+    if (textBox.value==""){
+    nameHere= "Scumlord-Hath No Name";
+        }
     }
 }
 //Changes the text/img when leftButton is pressed. [Move Onward]
