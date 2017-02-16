@@ -144,8 +144,8 @@ function myChanger4() {
     //function to set the value to the user's name
     document.getElementById("SBID").onclick = function myNameChanger() {
     nameHere= textBox.value;
-    //Notifies name entry
-    document.getElementById("text").appendChild(" Name Entered!");
+    //Notifies name entry by graying out box
+    document.getElementById("TBID").disabled = true;
     //conditional to provide a name if nothing is submitted.
     if (textBox.value==""){
     nameHere= "Scumlord-Hath No Name";
