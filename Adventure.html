@@ -129,17 +129,22 @@ function myChanger4() {
     document.getElementById("leftButton").innerHTML="Move Onward";
     document.getElementById("rightButton").innerHTML="Get Supplies First";
     //changes the function the buttons use.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger5()" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger6()" );
+    document.getElementById("leftButton").setAttribute( "onClick", "myChanger5()" );
+    document.getElementById("rightButton").setAttribute( "onClick", "myChanger6()" );
     //text box for name entry
     var textBox = document.createElement("input");
     textBox.type = "text";
     textBox.id= "TBID";
     var submitBox = document.createElement("input");
     submitBox.type = "submit";
+    submitBox.id= "SBID";
+    document.getElementById("SBID").setAttribute( "onClick", "myNameChanger()" );
     document.getElementById("text").appendChild(textBox);
     document.getElementById("text").appendChild(submitBox);
-    nameHere= document.getElementById("TBID").value;
+}
+    //Changes the player name.
+function myNameChanger() {
+    textBox.value= nameHere;
 }
 //Changes the text/img when leftButton is pressed. [Move Onward]
 function myChanger5() {
