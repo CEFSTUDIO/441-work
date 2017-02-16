@@ -123,18 +123,21 @@ function gameOver() {
 //Changes the text/img when leftButton is pressed. [Enter Name]
 function myChanger4() {
     document.getElementById("text").innerHTML = "According to my psychic powers your name is " + nameHere + ". What an interesting name. "+
-    "If I'm wrong- correct me below. Your name should change to the correct one in the next panel.";
+    "If I'm wrong- correct me below. Your name should change to the correct one in the next panel. ";
     document.getElementById("img").src = "http://33.media.tumblr.com/d4e3375ce2733f80c0b38ea400280a11/tumblr_n9xpitdMKm1twaufoo4_500.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="Move Onward";
     document.getElementById("rightButton").innerHTML="Get Supplies First";
     //changes the function the buttons use.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger5()" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger6()" );
     //text box for name entry
     var textBox = document.createElement("input");
     textBox.type = "text";
+    var submitBox = document.createElement("input");
+    textBox.type = "submit";
     document.getElementById("text").appendChild(textBox);
+     document.getElementById("text").appendChild(submitBox);
     nameHere= textBox.value;
 }
 //Changes the text/img when leftButton is pressed. [Move Onward]
@@ -150,7 +153,7 @@ function myChanger5() {
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
 //Changes the text/img when rightButton is pressed. [Get Supplies First]
-function myChanger5() {
+function myChanger6() {
     document.getElementById("text").innerHTML = "Supplies? You have a sword, shield, horse, food, and water- " + nameHere +
     ". What else do you need? You happen to have just enough to buy one item, what's it going to be?";
     document.getElementById("img").src = "http://38.media.tumblr.com/f95e96d1fe07fcf7f6a1b0fdd50cc944/tumblr_nefh9fbK7g1rg39emo1_500.gif";
