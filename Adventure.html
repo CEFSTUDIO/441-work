@@ -65,6 +65,8 @@
 </div>
 
 <script>
+//assigned here to be used by functions below.
+var nameHere = "Eggs Benedict";
 //changes text/img/quote when leftButton yes is pressed
 function myChanger() {
     document.getElementById("text").innerHTML = "So you wanna slay a dragon? Good! Now, where do dragons live? " +
@@ -120,24 +122,44 @@ function gameOver() {
 } 
 //Changes the text/img when leftButton is pressed. [Enter Name]
 function myChanger4() {
-    var nameHere = "Eggs Benedict";
     document.getElementById("text").innerHTML = "According to my psychic powers your name is " + nameHere + ". What an interesting name. "+
-    "If I'm wrong- correct me below. Your name should change to the correct one!";
+    "If I'm wrong- correct me below. Your name should change to the correct one in the next panel.";
     document.getElementById("img").src = "http://33.media.tumblr.com/d4e3375ce2733f80c0b38ea400280a11/tumblr_n9xpitdMKm1twaufoo4_500.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="Move Onward";
     document.getElementById("rightButton").innerHTML="Get Supplies First";
     //changes the function the buttons use.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger5()" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
     //text box for name entry
     var textBox = document.createElement("input");
     textBox.type = "text";
     document.getElementById("text").appendChild(textBox);
-    //submit button for name entry
-    var submitButton = document.createElement("input");
-    submitButton.type = "button";
-    document.getElementById("text").appendChild("input");
+    nameHere= textBox.value;
+}
+//Changes the text/img when leftButton is pressed. [Move Onward]
+function myChanger5() {
+    document.getElementById("text").innerHTML = "I'm sure you remember the cave I mentioned earlier, " + nameHere +
+    ". Do you want to go to the cave or the old abandoned castle? Hopefully the supplies you have are enough!";
+    document.getElementById("img").src = "http://38.media.tumblr.com/f95e96d1fe07fcf7f6a1b0fdd50cc944/tumblr_nefh9fbK7g1rg39emo1_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Cave?";
+    document.getElementById("rightButton").innerHTML="Castle?";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+}
+//Changes the text/img when rightButton is pressed. [Get Supplies First]
+function myChanger5() {
+    document.getElementById("text").innerHTML = "Supplies? You have a sword, shield, horse, food, and water- " + nameHere +
+    ". What else do you need? You happen to have just enough to buy one item, what's it going to be?";
+    document.getElementById("img").src = "http://38.media.tumblr.com/f95e96d1fe07fcf7f6a1b0fdd50cc944/tumblr_nefh9fbK7g1rg39emo1_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Dragon Nip";
+    document.getElementById("rightButton").innerHTML="Dragon Poison";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
 </script>
 
