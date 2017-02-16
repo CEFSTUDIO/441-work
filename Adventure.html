@@ -84,7 +84,7 @@ function myChanger() {
     //This function only is used when "no" is pressed at the beginning. Default Game-Over elsewhere.
  function myChanger2() {
     document.getElementById("text").innerHTML = "GAME OVER! " + "Didn't even want to try? Really? What kind of knight are you? Or- are "+
-    "you even a knight at all? You must be real fun at parties! Really. Invitation is in the mail.";
+    "you even a knight at all? You must be real fun at parties! Really. Invitation is in the mail. Maybe the buttons will save you?";
     document.getElementById("img").src = "https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif";
     document.getElementById("quote").innerHTML= "";
     //changes text of buttons
@@ -161,8 +161,8 @@ function myChanger5() {
     document.getElementById("leftButton").innerHTML="Cave?";
     document.getElementById("rightButton").innerHTML="Castle?";
     //changes the function the buttons use- no function now.
-    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger7()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger8()" );
 }
 //Changes the text/img when rightButton is pressed. [Get Supplies First]
 function myChanger6() {
@@ -173,9 +173,73 @@ function myChanger6() {
     document.getElementById("leftButton").innerHTML="Dragon Nip";
     document.getElementById("rightButton").innerHTML="Dragon Poison";
     //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger9()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger10()" );
+}
+//Changes the text/img when leftButton is pressed. [Cave?]
+function myChanger7() {
+    document.getElementById("text").innerHTML = "The cave? Well, you hear a roar. Loud, thunderous. Is it a Dragon, " + nameHere +
+    "? Who knows unless you go further in and see! Or, you know, you can run away. It sounds really big and threatening.";
+    document.getElementById("img").src = "https://s-media-cache-ak0.pinimg.com/originals/0c/29/8a/0c298ac1429fe2a59f96a8b70d867b5d.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Further In?";
+    document.getElementById("rightButton").innerHTML="Retreat!";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger2()" );
+}
+//Changes the text/img when rightButton is pressed. [Castle?]
+function myChanger8() {
+    document.getElementById("text").innerHTML = "It's an old abandoned castle, " + nameHere + ". It's sort of pretty. Well, in a " +
+    "busted sort of sense. Not much here, or so it seems. Maybe dragons really do live in caves?";
+    document.getElementById("img").src = "http://24.media.tumblr.com/7c8951c86d8336eb5ada9701119cf80c/tumblr_n4ev2xKYba1riurjqo2_r1_500.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Further In?";
+    document.getElementById("rightButton").innerHTML="Cave Instead?";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myChanger7()" );
+}
+//Changes the text/img when leftButton is pressed. [Dragon Nip]
+function myChanger9() {
+    document.getElementById("text").innerHTML = "Dragon nip? No- not what you're thinking, " + nameHere + "." +
+    " Like cat nip- for dragons. Speaking of- as soon as you walk out of the store the sky gets dark. Oh no!" + 
+    " You've attracted a dragon! What will you do?";
+    document.getElementById("img").src = "";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Run";
+    document.getElementById("rightButton").innerHTML="Give Dragon Nip?";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "myChanger2()" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "myEnding1()" );
+}
+//Changes the text/img when rightButton is pressed. [Dragon Poison]
+function myChanger10() {
+    document.getElementById("text").innerHTML = "Dragon poison- excellent choice " + nameHere +
+    ". Good luck getting the thing to eat it! I believe in you, noble knight. Now, I'm sure you remember the cave and" +
+    " abandoned castle I mentioned. Best to look for the beast there! Where to?";
+    document.getElementById("img").src = "https://68.media.tumblr.com/800e0fb0a1c149de0b59628b85d4e8f7/tumblr_inline_n8jjznmo1r1spq6ys.gif";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Cave?";
+    document.getElementById("rightButton").innerHTML="Castle?";
+    //changes the function the buttons use- no function now.
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
+//Changes the text/img when rightButton is pressed. [Give Dragon Nip?]
+    //This function is a dead end- no further action unless page is reloaded- Game Won!
+function myEnding1() {
+    document.getElementById("text").innerHTML = "The dragon loves it! You're best buddies for life!" + nameHere +
+    ", you decided friendship was important! Why kill the dragon when you can be besties? You name the dragon Mr.Frisky and" + 
+    " live happily ever after. Seriously you own a dragon- you rule! King isn't too thrilled though with your new pet." +
+    " There go the new drapes. You won! The buttons won't do a thing now, winner you. Refresh to play again!";
+    document.getElementById("img").src = "https://media.tenor.co/images/b53ebe7c3433e0f97bfbdf0f372a0adc/raw";
+    //changes text of buttons
+    document.getElementById("leftButton").innerHTML="Winner!";
+    document.getElementById("rightButton").innerHTML="Power of Friendship!";
+    //changes the function the buttons use- no function now.
+    document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 </script>
 
 </body>
