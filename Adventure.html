@@ -82,7 +82,7 @@ function myChanger() {
     document.getElementById("rightButton").innerHTML="Give Up!";
     //changes the function the buttons use
     document.getElementById( "leftButton" ).setAttribute( "onClick", "javascript: myChanger4();" );
-    document.getElementById( "rightButton" ).setAttribute( "onClick", "javascript: gameOver();" );
+    document.getElementById( "rightButton" ).setAttribute( "onClick", "javascript: myEnding7();" );
 }
  //changes text/img/quote when rightButton no is pressed
     //This function only is used when "no" is pressed at the beginning. Default Game-Over elsewhere.
@@ -380,11 +380,11 @@ function myEnding6() {
     document.getElementById( "leftButton" ).setAttribute( "onClick", "" );
     document.getElementById( "rightButton" ).setAttribute( "onClick", "" );
 }
-//This is the default gameover- occuring whenever a wrong choice is made. (Can be caused by either button press)
+//Changes the text/img when rightButton is pressed. [Give Up?]- can be reused.
     //This function is a dead end- no further action unless page is reloaded- game over.
-function gameOver() {
- document.getElementById("text").innerHTML = "GAME OVER!  You lost! Not sure how but you lost. What kind of knight are you? A pathetic one. " +
-    " No going back- have to reload to try again. No check point system either. You're dead. [Somehow?] Can't really stop being dead. So- better luck next time.";
+function myEnding7() {
+ document.getElementById("text").innerHTML = "GAME OVER! You lost! The dragon saw you were a quiter and just... straight up ate you. Maybe " + 
+ "put more effort into it next time? No going back- no checkpoint system either! Try again- reload the page. Why did you even give up?";
     document.getElementById("img").src = "http://i.imgur.com/xZsABpV.gif";
     //changes text of buttons
     document.getElementById("leftButton").innerHTML="GAME OVER";
